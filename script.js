@@ -29,9 +29,6 @@ for (let i = 0; i < numRows; i++) {
     }
 }
 
-const grid = document.getElementById('grid');
-grid.style.gridTemplateColumns = `repeat(${numColumns}, 30px)`;
-
 function getLastLikePosition() {
     let lastLike = [-1, -1];
 
@@ -72,7 +69,12 @@ function getCatDogPostsCounter() {
 }
 
 function renderGrid() {
+    const grid = document.getElementById('grid');
+
     grid.innerHTML = '';
+    grid.classList.add('grid-container');
+    grid.style.gridTemplateColumns = `repeat(${numColumns}, 30px)`;
+
     for (let i = 0; i < numRows; i++) {
         for (let j = 0; j < numColumns; j++) {
             const cell = document.createElement('div');
