@@ -80,6 +80,7 @@ body {
 }
 
 .item-left {
+    text-align: left;
     font-weight: normal;
 }
 
@@ -113,4 +114,25 @@ section {
 
 section:last-child {
     border-bottom: none;
+}
+
+button {
+    border-radius: 10px;
+    padding: 10px 24px;
+    color: aliceblue;
+    background-color: rgb(221, 45, 45);
+    font-weight: normal;
+    width: 100%;
+    margin: 5px auto;
+    cursor: pointer;
+    font-size: large;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    background-color: rgb(235, 57, 57);
+    box-shadow: inset 3px 3px 12px rgb(0, 0, 0, 0.60);
 }

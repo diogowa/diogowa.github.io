@@ -24,7 +24,7 @@
                 Criámos uma rede social onde cada post é sobre um gato ou um cão, <em>Cats & Dogs Talking</em>. Abstraímos um feed de uma rede social para uma grelha onde cada célula corresponde a um post. Uma <a style="color: #66b3ff;">célula azul</a> é um post sobre um gato, uma <a style="color: #e77e7e;">célula vermelha</a> é um post sobre um cão. Inicialmente, esta grelha não contém qualquer preferência no tipo de conteúdo que o utilizador gosta, encontrando-se distribuída com 50% de posts de gatos e 50% de posts de cães.
             </p>
             <p>
-                Imagine que a grelha é um feed de uma rede social, mas em vez de os posts estarem dispostos de cima para baixo, estão dispostos da esquerda para a direita. Ao clicar numa célula, está a colocar um "gosto". Se clicar novamente na mesma célula, retira o "gosto". Com base nos gostos que coloca, o algoritmo adapta-se e é redistribuido o conteúdo na grelha de acordo com as suas preferências. Desta maneira, é possível visualizar sobre o que serão os posts futuros, se sobre gatos, cães ou manterá um equilíbrio entre ambos.
+                Imagine que a grelha é um feed de uma rede social, mas em vez de os posts estarem dispostos de cima para baixo, estão dispostos da esquerda para a direita. Ao clicar numa célula, está a colocar um "gosto". Se clicar novamente na mesma célula, retira o "gosto". Com base nos gostos que coloca, o algoritmo adapta-se e é redistribuído o conteúdo na grelha de acordo com as suas preferências. Desta maneira, é possível visualizar sobre o que serão os posts futuros, se sobre gatos, cães ou manterá um equilíbrio entre ambos.
             </p>
         </section>
         <section>
@@ -38,7 +38,15 @@
     <div class="stats-up-container">
         <div class="stats-up-container-row">
             <div class="item-left">
-                Probabilidade do post ser:
+                Número total de posts:
+            </div>
+            <div class="item-right">
+                <span id="totalPosts">0</span>
+            </div>
+        </div>
+        <div class="stats-up-container-row">
+            <div class="item-left">
+                Probabilidade do próximo post ser:
             </div>
             <div class="item-right">
                 <span id="catProb" class="number-prob">🐱 0%</span>
@@ -48,27 +56,38 @@
         </div>
         <div class="stats-up-container-row">
             <div class="item-left">
-                Número total de posts:
+                Gostos em 🐱:
             </div>
             <div class="item-right">
-                <span id="totalPosts">0</span>
+                <span id="likesCats">0</span>
             </div>
         </div>
         <div class="stats-up-container-row">
             <div class="item-left">
-                Percentagem de posts de 🐱:
+                Gostos em 🐶:
             </div>
             <div class="item-right">
-                <span id="percentageCatPosts">0%</span>
+                <span id="likesDogs">0</span>
             </div>
         </div>
         <div class="stats-up-container-row">
             <div class="item-left">
-                Percentagem de posts de 🐶:
+                Posts futuros de 🐱:
             </div>
             <div class="item-right">
-                <span id="percentageDogPosts">0%</span>
+                <span id="futureCatPosts">0</span>
             </div>
+        </div>
+        <div class="stats-up-container-row">
+            <div class="item-left">
+                Posts futuros de 🐶:
+            </div>
+            <div class="item-right">
+                <span id="futureDogPosts">0</span>
+            </div>
+        </div>
+        <div class="stats-up-container-row">
+            <button onclick="drawGrid()">Restart</button>
         </div>
     </div>
 
