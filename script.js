@@ -126,8 +126,8 @@ function updateStatsHTML() {
     const catProb = getCatProbability();
     const dogProb = 1 - catProb;
 
-    document.getElementById('catProb').textContent = `🐱 ${Math.round(catProb * 10000) / 100}%`;
-    document.getElementById('dogProb').textContent = `🐶 ${Math.round(dogProb * 10000) / 100}%`;
+    document.getElementById('catProb').textContent = `🐱 ${(Math.round(catProb * 10000) / 100).toFixed(2)}%`;
+    document.getElementById('dogProb').textContent = `🐶 ${(Math.round(dogProb * 10000) / 100).toFixed(2)}%`;
 
     // calculate balanceOrEcho
     const totalFuturePosts = catPostsCounter + dogPostsCounter;

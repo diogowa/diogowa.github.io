@@ -15,22 +15,42 @@
         <section>
             <h2>Introdução</h2>
             <p>
-                Para muitas pessoas, as redes sociais são o principal sítio de consumo de todos os tipos de media, como notícias, entretenimento e atualizações sobre a vida de familiares e amigos. Na cadeira de Entretenimento Digital, quisemos explorar o conceito de <em>echo chamber</em> que estas redes criam e como nós, seres humanos, fazemos parte do problema.
+                Para muitas pessoas, as redes sociais são o principal sítio de consumo de todos os tipos de media, como notícias, entretenimento e atualizações sobre a vida de familiares e amigos. Na cadeira de Entretenimento Digital, quisemos explorar o conceito de <em>echo chamber</em> criada por estas redes e os algoritmos que a amplificam.
             </p>
         </section>
         <section>
-            <h2>Projeto</h2>
+            <h2>O Projeto</h2>
             <p>
-                Criámos uma rede social onde cada post é sobre um gato ou um cão, <em>Cats & Dogs Talking</em>. Abstraímos um feed de uma rede social para uma grelha onde cada célula corresponde a um post. Uma <a style="color: #66b3ff;">célula azul</a> é um post sobre um gato, uma <a style="color: #e77e7e;">célula vermelha</a> é um post sobre um cão. Inicialmente, esta grelha não contém qualquer preferência no tipo de conteúdo que o utilizador gosta, encontrando-se distribuída com 50% de posts de gatos e 50% de posts de cães.
+                Criámos uma rede social chamada <em>Cats & Dogs Talking</em>, onde cada publicação é sobre um gato ou um cão. Abstraímos um feed de notícias de uma rede social para uma grelha em que cada célula corresponde a uma publicação. Uma <a style="color: #66b3ff;">célula azul</a> corresponde a uma publicação sobre um gato e uma <a style="color: #e77e7e;">célula vermelha</a> corresponde a uma publicação sobre um cão. Inicialmente, esta grelha não tem qualquer preferência no tipo de conteúdo que o utilizador gosta, encontrando-se distribuída com 50% de publicações de gatos e 50% de publicações de cães.
             </p>
             <p>
-                Imagine que a grelha é um feed de uma rede social, mas em vez de os posts estarem dispostos de cima para baixo, estão dispostos da esquerda para a direita. Ao clicar numa célula, está a colocar um "gosto". Se clicar novamente na mesma célula, retira o "gosto". Com base nos gostos que coloca, o algoritmo adapta-se e é redistribuído o conteúdo na grelha de acordo com as suas preferências. Desta maneira, é possível visualizar sobre o que serão os posts futuros, se sobre gatos, cães ou manterá um equilíbrio entre ambos.
+                Imagine que a grelha é o seu feed de notícias, mas em vez de as publicações estarem dispostas de cima para baixo, estão dispostas da esquerda para a direita. Ao clicar numa célula, está a indicar que gosta daquela publicação. Se clicar novamente na mesma célula, retira o "gosto". Com base nos gostos que vai colocando, o algoritmo adapta-se e o conteúdo na grelha é redistribuído de acordo com as suas preferências. Desta forma, é possível visualizar antecipadamente o que serão as publicações futuras no seu feed: sobre gatos, cães ou um equilíbrio entre ambos.
             </p>
         </section>
         <section>
-            <h3>Importante</h3>
+            <h2>Sugestões de Utilização</h2>
             <p>
-                Ao colocar "gostos" nas células, siga a sequência de leitura exatamente como faria numa rede social. Assim, obterá resultados mais fidedignos e poderá tirar melhores conclusões.
+                Ao experimentar o seu feed de notícias, poderá observar o seguinte:
+            </p>
+            <ul>
+                <li>
+                    Se mantiver um equilíbrio nos gostos entre publicações sobre cães e gatos, poderá observar que as publicações futuras se manterão igualmente distribuídas.
+                </li>
+                <li>
+                    Se gostar de gatos e só colocar "gostos" em publicações sobre gatos, poderá observar que as publicações futuras serão sobre gatos.
+            </ul>
+            <p>
+                Na parte superior do seu feed de notícias pode encontrar a probabilidade da próxima publicação ser sobre um gato ou um cão. No início, estes números estão a verde, o que simboliza o equilíbrio entre publicações, mas podem ficar a vermelho, o que simboliza que se encontra numa <em>echo chamber</em>. Com esta informação, tente chegar a novas observações e conclusões. Tente sair da <em>echo chamber</em> onde se colocou e tirar conclusões da dificuldade desse processo.
+            </p>
+        </section>
+        <section>
+            <h2>Feed de Notícias</h2>
+            <p>
+                Em baixo está o seu feed de notícias com <span id="totalPosts">0</span> publicações. Ao colocar um "gosto" numa publicação, para a frente desse "gosto" o seu feed é redistribuído com base na probabilidade da próxima publicação ser sobre um gato ou um cão, calculada a partir do algoritmo que se encontra por trás.
+            </p>
+            <h3>Nota Importante</h3>
+            <p>
+                Ao colocar "gostos" nas células, siga a sequência de leitura tal como faria numa rede social. Desta forma, obterá resultados mais fidedignos e poderá tirar melhores conclusões.
             </p>
         </section>
     </div>
@@ -38,25 +58,17 @@
     <div class="stats-up-container">
         <div class="stats-up-container-row">
             <div class="item-left">
-                Número total de posts:
-            </div>
-            <div class="item-right">
-                <span id="totalPosts">0</span>
-            </div>
-        </div>
-        <div class="stats-up-container-row">
-            <div class="item-left">
-                Probabilidade do próximo post ser:
+                Probabilidade da próxima publicação ser:
             </div>
             <div class="item-right">
                 <span id="catProb" class="number-prob">🐱 0%</span>
-                -
+                <br>
                 <span id="dogProb" class="number-prob">🐶 0%</span>
             </div>
         </div>
         <div class="stats-up-container-row">
             <div class="item-left">
-                Gostos em 🐱:
+                Gostos em publicações de 🐱:
             </div>
             <div class="item-right">
                 <span id="likesCats">0</span>
@@ -64,7 +76,7 @@
         </div>
         <div class="stats-up-container-row">
             <div class="item-left">
-                Gostos em 🐶:
+                Gostos em publicações de 🐶:
             </div>
             <div class="item-right">
                 <span id="likesDogs">0</span>
@@ -72,7 +84,7 @@
         </div>
         <div class="stats-up-container-row">
             <div class="item-left">
-                Posts futuros de 🐱:
+                Publicações futuras de 🐱:
             </div>
             <div class="item-right">
                 <span id="futureCatPosts">0</span>
@@ -80,14 +92,14 @@
         </div>
         <div class="stats-up-container-row">
             <div class="item-left">
-                Posts futuros de 🐶:
+                Publicações futuras de 🐶:
             </div>
             <div class="item-right">
                 <span id="futureDogPosts">0</span>
             </div>
         </div>
         <div class="stats-up-container-row">
-            <button onclick="drawGrid()">Restart</button>
+            <button onclick="drawGrid()">Reiniciar</button>
         </div>
     </div>
 
@@ -97,24 +109,10 @@
         <section>
             <h2>Conclusão</h2>
             <p>
-                Ao experimentar a nossa rede social, pode ter observado o seguinte:
+                Este projeto mostra a formação de <em>echo chambers</em> com dois tipos exclusivos: cães e gatos.  Mostra como o algoritmo ajuda na formação e amplificação destes "quartos de eco". Os algoritmos filtram a informação, apresentando cada vez mais apenas conteúdos que vão ao encontro das preferências e ideias do utilizador, limitando a existência de ideias contrárias.
             </p>
-            <ul>
-                <li>
-                    Se tentar manter um equilíbrio nos gostos que coloca, irá observar que os seus posts futuros manter-se-ão equilibrados.
-                </li>
-                <li>
-                    Se mantiver uma preferência constante, como só colocar gostos em posts de gatos, irá entrar numa <em>echo chamber</em> onde os seus posts futuros serão maioritariamente de gatos.
-                </li>
-            </ul>
             <p>
-                Contudo, há mais uma coisa que deve experimentar. Replique a ação de colocar gostos só em posts de gatos e, quando os posts futuros forem só de gatos, experimente tentar sair da <em>echo chamber</em>. Parando de colocar gostos em posts de gatos e colocando gostos só em posts de cães, irá chegar a um momento em que a probabilidade de aparecer um post de um gato ou de um cão ficará verde, mostrando que conseguiu sair da <em>echo chamber</em>.
-            </p>
-        </section>
-        <section>
-            <h2>Crítica</h2>
-            <p>
-                Afinal, a culpa é das corporações que criam estes algoritmos sofisticados ou é nossa? Se experimentou o exemplo que propusemos, poderá concluir que a culpa é de ambos. No futuro, reflita sobre o que consome nas suas redes socias e tente identificar e sair da <em>echo chamber</em> onde se colocou.
+                As <em>echo chambers</em> e os algoritmos das redes sociais que as amplificam têm um impacto no nosso comportamento e na nossa perceção do mundo, podendo conduzir a comportamentos radicais e a uma visão limitada da realidade. É importante refletir sobre como evitar entrar nestes "quartos de eco" e procurar uma visão mais ampla e diversificada.
             </p>
         </section>
     </div>
