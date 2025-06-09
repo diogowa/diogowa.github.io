@@ -7,76 +7,99 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
+    <header>
         <h1>Cats & Dogs Talking</h1>
     </header>
-    <main class="main-content">
-        <section class="intro-section">
-            <h2>Introdução</h2>
-            <p>Olá! 👋</p>
-            <p>
-                Para a cadeira de Entretenimento Digital quisemos explorar o conceito de
-                "<em>echo chamber</em>" e os impactos que tem nos feeds das nossas redes sociais.
-                Criámos este pequeno brinquedo para que possas descobrir por ti mesmo o impacto
-                que as echo chambers causam.
-            </p>
-            <p>No final, terás algumas observações nossas e a crítica a que pretendemos ir ao encontro.</p>
-        </section>
 
-        <section class="instructions-section">
-            <h2>Instruções</h2>
+    <div class="text-project">
+        <section>
+            <h2>Introdução</h2>
             <p>
-                Terás à tua frente uma grelha que simula um feed de uma rede social. Nesta rede social
-                só existem posts sobre cães ou gatos, onde cada célula azul da matriz corresponde a um post
-                sobre um gato e cada célula vermelha corresponde a um post sobre um cão.
-            </p>
-            <p>
-                Inicialmente o algoritmo não sabe nada sobre ti, pelo que os posts surgem perto de
-                <strong>50% cães</strong> e <strong>50% gatos</strong>. Para o algoritmo aprender, basta
-                clicares na célula que queres “gostar” (voltar a clicar para desmarcar).
-            </p>
-            <p>
-                As células seguintes serão recalculadas com base nas tuas preferências. Lembra-te de que
-                o feed segue a sequência de leitura: primeiro canto superior esquerdo, depois à direita, e
-                assim por diante.
+                Para muitas pessoas, as redes sociais são o principal sítio de consumo de todos os tipos de media, como notícias, entretenimento e atualizações sobre a vida de familiares e amigos. Na cadeira de Entretenimento Digital, quisemos explorar o conceito de <em>echo chamber</em> que estas redes criam e como nós, seres humanos, fazemos parte do problema.
             </p>
         </section>
-    </main>
-    <div class="fix-above-grid">
-        <div class="prob-label">Probabilidade de calhar um post de:</div>
-            <div class="prob-values">
-                <span id="catProb" class="numberProb">Gato 0%</span>
-                <span class="separator">/</span>
-                <span id="dogProb" class="numberProb">Cão 0%</span>
+        <section>
+            <h2>Projeto</h2>
+            <p>
+                Criámos uma rede social onde cada post é sobre um gato ou um cão, <em>Cats & Dogs Talking</em>. Abstraímos um feed de uma rede social para uma grelha onde cada célula corresponde a um post. Uma célula azul é um post sobre um gato, uma célula vermelha é um post sobre um cão. Inicialmente, esta grelha não contém qualquer preferência no tipo de conteúdo que o utilizador gosta, encontrando-se distribuída com 50% de posts de gatos e 50% de posts de cães.
+            </p>
+            <p>
+                Imagine que a grelha é um feed de uma rede social, mas em vez de os posts estarem dispostos de cima para baixo, estão dispostos da esquerda para a direita. Ao clicar numa célula, está a colocar um "gosto". Se clicar novamente na mesma célula, retira o "gosto". Com base nos gostos que coloca, o algoritmo adapta-se e é redistribuido o conteúdo na grelha de acordo com as suas preferências. Desta maneira, é possível visualizar sobre o que serão os posts futuros, se sobre gatos, cães ou manterá um equilíbrio entre ambos.
+            </p>
+        </section>
+        <section>
+            <h3>Importante</h3>
+            <p>
+                Ao colocar "gostos" nas células, siga a sequência de leitura exatamente como faria numa rede social. Assim, obterá resultados mais fidedignos e poderá tirar melhores conclusões.
+            </p>
+        </section>
+    </div>
+
+    <div class="stats-up-container">
+        <div class="stats-up-container-row">
+            <div class="item-left">
+                Probabilidade do post ser:
+            </div>
+            <div class="item-right">
+                <span id="catProb" class="number-prob">🐱 0%</span>
+                -
+                <span id="dogProb" class="number-prob">🐶 0%</span>
+            </div>
+        </div>
+        <div class="stats-up-container-row">
+            <div class="item-left">
+                Número total de posts:
+            </div>
+            <div class="item-right">
+                <span id="totalPosts">0</span>
+            </div>
+        </div>
+        <div class="stats-up-container-row">
+            <div class="item-left">
+                Percentagem de posts de 🐱:
+            </div>
+            <div class="item-right">
+                <span id="percentageCatPosts">0%</span>
+            </div>
+        </div>
+        <div class="stats-up-container-row">
+            <div class="item-left">
+                Percentagem de posts de 🐶:
+            </div>
+            <div class="item-right">
+                <span id="percentageDogPosts">0%</span>
             </div>
         </div>
     </div>
 
     <div id="grid" class="grid-container"></div>
 
-    <div class="fix-below-grid">
-        <div class="stats-item">Posts totais: <span id="totalPosts">0</span></div>
-        <div class="stats-item">Percentagem de gatos: <span id="percentageCatPosts">0%</span></div>
-        <div class="stats-item">Percentagem de cães: <span id="percentageDogPosts">0%</span></div>
+    <div class="text-project">
+        <section>
+            <h2>Conclusão</h2>
+            <p>
+                Ao experimentar a nossa rede social, pode ter observado o seguinte:
+            </p>
+            <ul>
+                <li>
+                    Se tentar manter um equilíbrio nos gostos que coloca, irá observar que os seus posts futuros manter-se-ão equilibrados.
+                </li>
+                <li>
+                    Se mantiver uma preferência constante, como só colocar gostos em posts de gatos, irá entrar numa <em>echo chamber</em> onde os seus posts futuros serão maioritariamente de gatos.
+                </li>
+            </ul>
+            <p>
+                Contudo, há mais uma coisa que deve experimentar. Replique a ação de colocar gostos só em posts de gatos e, quando os posts futuros forem só de gatos, experimente tentar sair da <em>echo chamber</em>. Parando de colocar gostos em posts de gatos e colocando gostos só em posts de cães, irá chegar a um momento em que a probabilidade de aparecer um post de um gato ou de um cão ficará verde, mostrando que conseguiu sair da <em>echo chamber</em>.
+            </p>
+        </section>
+        <section>
+            <h2>Crítica</h2>
+            <p>
+                Afinal, a culpa é das corporações que criam estes algoritmos sofisticados ou é nossa? Se experimentou o exemplo que propusemos, poderá concluir que a culpa é de ambos. No futuro, reflita sobre o que consome nas suas redes socias e tente identificar e sair da <em>echo chamber</em> onde se colocou.
+            </p>
+        </section>
     </div>
 
-    <footer class="conclusion-section">
-        <h2>Conclusão</h2>
-        <p>Se seguiste as nossas instruções, podes ter concluído várias coisas:</p>
-            <ul>
-            <li>Ao gostar de certos posts, o feed adapta-se e repete esse tipo de conteúdo.</li>
-            <li>Compreendeste como, mesmo num feed simples, a câmara de eco se forma.</li>
-        </ul>
-
-        <h2>Crítica</h2>
-        <p>
-            Com algo tão simples como esta simulação, replicámos o comportamento das redes sociais:
-            procuras o que gostas e o algoritmo alimenta essa preferência. A culpa não é só do algoritmo
-            ou só tua—é de ambos. Cabe a ti procurar novas perspetivas e sair desse loop, para evitares
-            ficarem preso(a) numa echo chamber. Como podeste comprovar, mesmo quando te encontras num
-            echo chamber é possível saíres dele.
-        </p>
-    </footer>
     <script src="script.js"></script>
 </body>
 </html>

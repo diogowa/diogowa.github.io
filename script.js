@@ -1,5 +1,5 @@
-const numRows = 40;
-const numColumns = 20;
+const numRows = 50;
+const numColumns = 10;
 let matrix = [];
 
 // options
@@ -7,7 +7,6 @@ const CAT = 0;
 const DOG = 1;
 const CAT_LIKE = 2;
 const DOG_LIKE = 3;
-const TEST = 4;
 
 // counter for likes
 let catLikesCounter = 0;
@@ -73,7 +72,6 @@ function renderGrid() {
 
     grid.innerHTML = '';
     grid.classList.add('grid-container');
-    grid.style.gridTemplateColumns = `repeat(${numColumns}, 30px)`;
 
     for (let i = 0; i < numRows; i++) {
         for (let j = 0; j < numColumns; j++) {
@@ -146,8 +144,8 @@ function updateStatsHTML() {
     const catProb = getCatProbability();
     const dogProb = 1 - catProb;
 
-    document.getElementById('catProb').textContent = `Gato ${Math.round(catProb * 10000) / 100}%`;
-    document.getElementById('dogProb').textContent = `Cão ${Math.round(dogProb * 10000) / 100}%`;
+    document.getElementById('catProb').textContent = `🐱 ${Math.round(catProb * 10000) / 100}%`;
+    document.getElementById('dogProb').textContent = `🐶 ${Math.round(dogProb * 10000) / 100}%`;
 
     // calculate balanceOrEcho
     const catDogPosts = getCatDogPostsCounter();
@@ -171,8 +169,6 @@ function calculateNewGrid() {
     const lastLike = getLastLikePosition();
 
     const catProb = getCatProbability();
-
-    console.log(lastLike);
 
     for (let i = 0; i < numRows; i++) {
         for (let j = 0; j < numColumns; j++) {
