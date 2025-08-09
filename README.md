@@ -58,8 +58,8 @@ The website is mobile responsive and uses only raw HTML / CSS and JavaScript.
 
 ## Author
 
-- Diogo Matias (@diogowa), nº70019, LEI: Research and Project (Web-application).
-- Guilherme Santos, nº65718, LMAGR: Research, Report and Presentation.
-- Inês Martins, nº66477, LMAGR: Research, Report and Presentation.
-- Lara Almeida, nº 65439, LMAGR: Research and Report.
-- Nuno Duarte, nº60593, MIEI: Research and Report.
+- **Diogo Matias (@diogowa), nº70019, LEI**: Research and Project (Web-application).
+- **Guilherme Santos, nº65718, LMAGR**: Research, Report and Presentation.
+- **Inês Martins, nº66477, LMAGR**: Research, Report and Presentation.
+- **Lara Almeida, nº 65439, LMAGR**: Research and Report.
+- **Nuno Duarte, nº60593, MIEI**: Research and Report.
