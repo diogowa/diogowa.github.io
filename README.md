@@ -54,3 +54,12 @@ The website is mobile responsive and uses only raw HTML / CSS and JavaScript.
 
 - **HTML / CSS**: layout, UI, and animations.
 - **JavaScript**: logic and social network algorithm.
+
+
+## Author
+
+- Diogo Matias (@diogowa), nº70019, LEI: Research and Project (Web-application).
+- Guilherme Santos, nº65718, LMAGR: Research, Report and Presentation.
+- Inês Martins, nº66477, LMAGR: Research, Report and Presentation.
+- Lara Almeida, nº 65439, LMAGR: Research and Report.
+- Nuno Duarte, nº60593, MIEI: Research and Report.
